@@ -76,7 +76,7 @@ julia> cv.path.betas[:, 48]
 `glmnet` also accepts many optional parameters, described below:
 
  - `weights`: A vector of weights for each sample of the same size as `y`.
- - `alpha`: The tradeoff between lasso and ridge regression. This defaults to `1.0`, which specifies a lasso model.
+ - `alpha`: The tradeoff between lasso and ridge regression. This defaults to `1.0`, which specifies a lasso model. alpha=`0` fits ridge, and alpha=`0.5` fits elastic net.
  - `penalty_factor`: A vector of length n of penalties for each predictor in `X`. This defaults to all ones, which weights each predictor equally. To specify that a predictor should be unpenalized, set the corresponding entry to zero.
  - `constraints`: An n x 2 matrix specifying lower bounds (first column) and upper bounds (second column) on each predictor. By default, this is `[-Inf Inf]` for each predictor in `X`.
  - `dfmax`: The maximum number of predictors in the largest model.
